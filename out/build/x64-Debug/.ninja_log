@@ -1,0 +1,18 @@
+# ninja log v5
+0	494	618739035	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	7be525f7e5c103b8
+494	803	618739035	ara/ara.exe	a8e97011d800e648
+0	426	618739257	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	45bf5f9c439d8682
+426	572	618739257	ara/ara.exe	a8e97011d800e648
+0	769	619249477	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	45bf5f9c439d8682
+5	783	619249477	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
+783	1033	619249477	ara/ara.exe	da6b0b6fe86c5154
+0	484	619249860	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
+485	640	619249860	ara/ara.exe	da6b0b6fe86c5154
+0	1002	619249941	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
+1003	1348	619249941	ara/ara.exe	da6b0b6fe86c5154
+0	496	619250014	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	45bf5f9c439d8682
+496	652	619250014	ara/ara.exe	da6b0b6fe86c5154
+1	529	619250153	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
+529	685	619250153	ara/ara.exe	da6b0b6fe86c5154
+0	543	619250225	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
+544	695	619250225	ara/ara.exe	da6b0b6fe86c5154
