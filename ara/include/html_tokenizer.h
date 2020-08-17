@@ -22,8 +22,10 @@ private:
 	bool finished = false;
 	HtmlToken currentToken;
 	bool inTag = false;
+	bool inComment = false;
 	HtmlTokenType _type;
 	std::string _tokenValue;
+	void tokenizeInsideTag(std::string tagInfo);
 public:
 	HtmlTokenizer(std::ifstream *stream);
 	bool hasMoreTokens();

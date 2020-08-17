@@ -12,9 +12,9 @@ int main(int argc, char *argv[])
 
 	if (argc < 2) {
 		cout << "too short arguments" << endl;
-		return -1;
+		//return -1;
 	}
-	string path = argv[1];
+	string path = "C:\\Users\\hykwy\\Downloads\\abehiroshi.html"; //argv[1];
 
 	auto input = ifstream(path);
 	auto tokenizer = HtmlTokenizer(&input);
