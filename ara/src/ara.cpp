@@ -3,6 +3,7 @@
 
 #include "ara.h"
 #include "html_tokenizer.h"
+#include "dom_generator.h"
 
 using namespace std;
 
@@ -19,10 +20,13 @@ int main(int argc, char *argv[])
 	auto input = ifstream(path);
 	auto tokenizer = HtmlTokenizer(&input);
 
-	while (tokenizer.hasMoreTokens()) {
-		tokenizer.advance();
-		cout << "type=" << static_cast<int>(tokenizer.type()) << ", value=\"" << tokenizer.tokenValue() << "\"" << endl;
-	}
+	auto generator = DomGenerator(&tokenizer);
+
+	generator.generate();
+
+	auto dom = generator.getDom();
+
+	dom.printString(0);
 
 	return 0;
 }

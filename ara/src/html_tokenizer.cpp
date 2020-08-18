@@ -18,6 +18,7 @@ void HtmlTokenizer::advance(bool init) {
 	using std::string;
 	using fastUtil::safeGetline;
 	if (finished) throw 0;
+	prevTokens.push_back(currentToken);
 	if (!nextTokens.empty()) {
 		currentToken = nextTokens.front();
 		nextTokens.pop_front();
@@ -127,6 +128,24 @@ void HtmlTokenizer::advance(bool init) {
 
 	_type = currentToken.type;
 	_tokenValue = currentToken.data;
+}
+
+void HtmlTokenizer::restore() {
+	finished = false;
+	nextTokens.push_front(currentToken);
+	if (!prevTokens.empty()) {
+		currentToken = HtmlToken{
+			_type, _tokenValue
+		};
+		auto prev = prevTokens.back();
+		_type = prev.type;
+		_tokenValue = prev.data;
+		prevTokens.pop_back();
+	}
+	else {
+		std::cout << "restore error" << std::endl;
+		throw 0;
+	}
 }
 
 HtmlTokenType HtmlTokenizer::type() {

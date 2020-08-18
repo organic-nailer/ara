@@ -72,7 +72,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 build cmake_object_order_depends_target_ara_Debug: phony || ara\CMakeFiles\ara.dir
 
 build ara\CMakeFiles\ara.dir\src\ara.cpp.obj: CXX_COMPILER__ara_Debug ..\..\..\ara\src\ara.cpp || cmake_object_order_depends_target_ara_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest
   INCLUDES = -I..\..\..\ara\include
   OBJECT_DIR = ara\CMakeFiles\ara.dir
   OBJECT_FILE_DIR = ara\CMakeFiles\ara.dir\src
@@ -80,7 +80,15 @@ build ara\CMakeFiles\ara.dir\src\ara.cpp.obj: CXX_COMPILER__ara_Debug ..\..\..\a
   TARGET_PDB = ara\ara.pdb
 
 build ara\CMakeFiles\ara.dir\src\html_tokenizer.cpp.obj: CXX_COMPILER__ara_Debug ..\..\..\ara\src\html_tokenizer.cpp || cmake_object_order_depends_target_ara_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest
+  INCLUDES = -I..\..\..\ara\include
+  OBJECT_DIR = ara\CMakeFiles\ara.dir
+  OBJECT_FILE_DIR = ara\CMakeFiles\ara.dir\src
+  TARGET_COMPILE_PDB = ara\CMakeFiles\ara.dir\
+  TARGET_PDB = ara\ara.pdb
+
+build ara\CMakeFiles\ara.dir\src\dom_generator.cpp.obj: CXX_COMPILER__ara_Debug ..\..\..\ara\src\dom_generator.cpp || cmake_object_order_depends_target_ara_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest
   INCLUDES = -I..\..\..\ara\include
   OBJECT_DIR = ara\CMakeFiles\ara.dir
   OBJECT_FILE_DIR = ara\CMakeFiles\ara.dir\src
@@ -95,7 +103,7 @@ build ara\CMakeFiles\ara.dir\src\html_tokenizer.cpp.obj: CXX_COMPILER__ara_Debug
 #############################################
 # Link the executable ara\ara.exe
 
-build ara\ara.exe: CXX_EXECUTABLE_LINKER__ara_Debug ara\CMakeFiles\ara.dir\src\ara.cpp.obj ara\CMakeFiles\ara.dir\src\html_tokenizer.cpp.obj
+build ara\ara.exe: CXX_EXECUTABLE_LINKER__ara_Debug ara\CMakeFiles\ara.dir\src\ara.cpp.obj ara\CMakeFiles\ara.dir\src\html_tokenizer.cpp.obj ara\CMakeFiles\ara.dir\src\dom_generator.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

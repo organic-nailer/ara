@@ -1026,6 +1026,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "_cpp_latest_flag_supported",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test _cpp_latest_flag_supported"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
 			"name" : "ara_BINARY_DIR",
 			"properties" : 
 			[

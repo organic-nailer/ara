@@ -29,3 +29,12 @@
 766	1063	619329528	ara/ara.exe	da6b0b6fe86c5154
 0	711	619332569	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
 712	868	619332569	ara/ara.exe	da6b0b6fe86c5154
+1	530	619446748	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	45bf5f9c439d8682
+8	602	619446748	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	c4d8fc88ffe1201b
+4	992	619458732	ara/CMakeFiles/ara.dir/src/html_tokenizer.cpp.obj	6883e54a0e7452ed
+0	1010	619458732	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	1d7ff76156f16456
+0	1095	619459533	ara/CMakeFiles/ara.dir/src/dom_generator.cpp.obj	425014154c4069f8
+1095	1369	619459533	ara/ara.exe	e343fa66da7dfd55
+0	687	619459964	ara/CMakeFiles/ara.dir/src/ara.cpp.obj	1d7ff76156f16456
+4	847	619459964	ara/CMakeFiles/ara.dir/src/dom_generator.cpp.obj	425014154c4069f8
+847	1013	619459964	ara/ara.exe	e343fa66da7dfd55
