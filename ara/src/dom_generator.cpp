@@ -121,9 +121,9 @@ DomNode DomGenerator::generateTag() {
 
 	bool isContentEmpty = false;
 	std::transform(tagName.cbegin(), tagName.cend(), tagName.begin(), toupper);
-//	if (singleTagSet.contains(tagName)) {
-//		isContentEmpty = true;
-//	}
+	if (singleTagSet.find(tagName) != singleTagSet.end()) {
+		isContentEmpty = true;
+	}
 	node.name = tagName;
 	if (isContentEmpty) {
 		node.type = NodeType::TERMINAL_TAG;

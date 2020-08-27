@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (ara "src/ara.cpp" "include/ara.h" "include/html_tokenizer.h" "src/html_tokenizer.cpp" "include/util.h" "include/dom_generator.h" "src/dom_generator.cpp" "src/ara_window.cpp")
+add_executable (ara "src/ara.cpp" "include/ara.h" "include/html_tokenizer.h" "src/html_tokenizer.cpp" "include/util.h" "include/dom_generator.h" "src/dom_generator.cpp" "src/ara_window.cpp" "include/render_tree_generator.h" "src/render_tree_generator.cpp" "include/html_renderer.h" "src/html_renderer.cpp")
 
 # TODO: Add tests and install targets if needed.
 target_include_directories(ara PRIVATE "include")

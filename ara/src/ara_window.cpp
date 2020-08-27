@@ -76,7 +76,7 @@ void AraWindow::draw() {
 	SkCanvas* canvas = sSurface->getCanvas();
 	//canvas->rotate(SkIntToScalar(++angle));
 	SkPaint paint;
-	paint.setColor(SK_ColorBLACK);
+	paint.setColor(SK_ColorBLUE);
 	//canvas->drawPaint(paint);
 	SkScalar scale = 10.0f;
 	SkPath path;
@@ -96,6 +96,25 @@ void AraWindow::draw() {
 	sContext->flush();
 }
 
+void AraWindow::drawRect(int left, int top, int right, int bottom, int32_t color) {
+	SkCanvas* canvas = sSurface->getCanvas();
+	SkPaint paint;
+	paint.setColor(color);
+	canvas->drawRect({ (float)left, (float)top, (float)right, (float)bottom }, paint);
+	sContext->flush();
+}
+
+void AraWindow::drawText(const char* text, int left, int top) {
+	SkCanvas* canvas = sSurface->getCanvas();
+	SkPaint paint;
+	paint.setColor(SK_ColorBLACK);
+	SkFont font;
+	font.setSubpixel(true);
+	font.setSize(40);
+	canvas->drawSimpleText(text, strlen(text), SkTextEncoding::kUTF8, (float)left, (float)top + 40, font, paint);
+	sContext->flush();
+}
+
 void AraWindow::pollEvents() {
 	glfwPollEvents();
 }
@@ -106,4 +125,9 @@ void AraWindow::swapBuffers() {
 
 bool AraWindow::shouldClose() {
 	return glfwWindowShouldClose(glWindow);
+}
+
+void AraWindow::clearWhite() {
+	SkCanvas* canvas = sSurface->getCanvas();
+	canvas->clear(SK_ColorWHITE);
 }

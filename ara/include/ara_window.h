@@ -14,8 +14,6 @@
 
 class AraWindow {
 private:
-	int windowWidth;
-	int windowHeight;
 	GLFWwindow* glWindow;
 	GrContext* sContext;
 	SkSurface* sSurface;
@@ -24,10 +22,15 @@ private:
 	//void errorCallback(int error, const char* description);
 	//void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 public:
+	int windowWidth;
+	int windowHeight;
 	AraWindow(int w, int h);
 	~AraWindow();
 	void draw();
 	void pollEvents();
 	void swapBuffers();
 	bool shouldClose();
+	void drawRect(int left, int top, int right, int bottom, int32_t color);
+	void drawText(const char* text, int left, int top);
+	void clearWhite();
 };
