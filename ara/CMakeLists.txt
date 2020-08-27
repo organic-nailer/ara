@@ -9,4 +9,17 @@ add_executable (ara "src/ara.cpp" "include/ara.h" "include/html_tokenizer.h" "sr
 # TODO: Add tests and install targets if needed.
 target_include_directories(ara PRIVATE "include")
 
-set_property(TARGET ara PROPERTY CXX_STANDARD 20)
+include_directories("C:/src/skia/skia")
+include_directories("C:/src/skia/skia/tools/sk_app")
+#include_directories("C:/src/glfw-3.3.2/include")
+link_directories("C:/src/skia/skia/out/Debug")
+#link_directories("C:/src/glfw-3.3.2/lib")
+#target_link_libraries(ara INTERFACE glfw3)
+target_link_libraries(ara opengl32)
+target_link_libraries(ara "C:/src/skia/skia/out/Debug/skia.lib")
+
+add_subdirectory("third/glfw-3.3.2")
+include_directories("third/glfw/include")
+target_link_libraries(ara glfw)
+
+set_property(TARGET ara PROPERTY CXX_STANDARD 17)
